@@ -41,3 +41,33 @@ graph TD
     F --> G[LLM Final Synthesis]
     B -- Knowledge Sufficient? --> H[Direct Response]
     G --> I[Final Answer to User]
+```
+# 📂 Project Structure
+```js
+AIToolCalling/
+├── 📄 index.js          # Core Logic & Tool Orchestration
+├── 📄 .env              # Sensitive Credentials
+├── 📄 package.json      # Dependencies
+└── 📄 README.md         # Documentation
+```
+# ⚙️ Quick Start
+1️⃣ Clone & Install
+```
+git clone [https://github.com/DeveloperManojKumarMeena/AIToolCalling.git](https://github.com/DeveloperManojKumarMeena/AIToolCalling.git)
+cd AIToolCalling
+npm install
+```
+2️⃣ Configure Environment <br>
+Create a .env file in the root directory:
+
+```
+GROK_API_KEY=your_groq_api_key_here
+TAVILY_API_KEY=your_tavily_api_key_here
+```
+3️⃣ Launch
+```
+node index.js
+```
+# 🤝 Connectivity
+Manoj Kumar Meena -<a href='https://github.com/DeveloperManojKumarMeena'> Github  </a> || 
+<a href='https://www.linkedin.com/in/manojkumarmeenasir/'>Linkedin</a>

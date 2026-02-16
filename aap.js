@@ -4,6 +4,7 @@ import { tavily } from "@tavily/core"
 
 config()
 const groq = new Groq({ apiKey: process.env.GROK_API_KEY })
+const tvly = tavily({ apiKey:process.env.TAVILY_API_KEY });
 
 async function main() {
     const completions = await groq.chat.completions.create({
@@ -18,7 +19,7 @@ async function main() {
             },
             {
                 role: "user",
-                content: "what is iphone 20 launched date?"
+                content: "on 15-02-2026 in R Premadasa Stadium Colombo who win the match ?"
             }
         ],
         tools: [
@@ -68,7 +69,8 @@ async function main() {
 main()
 
 async function webSearch({ query }) {
-    console.log('calling webSearch')
-
-    return "I Phone-20 was launched on 20 september 2028 "
+ 
+    const response = await tvly.search(query);
+    console.log('tvly response here :- ' ,response)
+    return response
 }
