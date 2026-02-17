@@ -71,6 +71,9 @@ main()
 async function webSearch({ query }) {
  
     const response = await tvly.search(query);
-    console.log('tvly response here :- ' ,response)
+   
+
+    const finalResult = response.results.map((result)=>result.content).join('\n\n');
+    console.log(finalResult)
     return response
 }
